@@ -23,4 +23,49 @@ class ItemStore {
             allItems.remove(at: index)
         }
     }
+    
+    func moveItem(from fromIndex: Int, to toIndex: Int) {
+        if fromIndex == toIndex {
+            return
+        }
+        
+        // get referenceto object being moved so you can reinsert it
+        let movedItem = allItems[fromIndex]
+        
+        // insert item in array at new location
+        allItems.insert(movedItem, at: toIndex)
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
