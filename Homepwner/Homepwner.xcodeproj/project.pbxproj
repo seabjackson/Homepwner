@@ -13,6 +13,7 @@
 		126842521E35ADDE00C3AC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 126842501E35ADDE00C3AC05 /* LaunchScreen.storyboard */; };
 		1268425A1E35AF2B00C3AC05 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126842591E35AF2B00C3AC05 /* ItemsViewController.swift */; };
 		1268425C1E35B0E600C3AC05 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268425B1E35B0E600C3AC05 /* Item.swift */; };
+		1268425E1E35C25900C3AC05 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268425D1E35C25900C3AC05 /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,8 @@
 		126842511E35ADDE00C3AC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		126842531E35ADDE00C3AC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		126842591E35AF2B00C3AC05 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
-		1268425B1E35B0E600C3AC05 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1268425B1E35B0E600C3AC05 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
+		1268425D1E35C25900C3AC05 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,6 @@
 		1268423B1E35ADDD00C3AC05 = {
 			isa = PBXGroup;
 			children = (
-				1268425B1E35B0E600C3AC05 /* Item.swift */,
 				126842461E35ADDE00C3AC05 /* Homepwner */,
 				126842451E35ADDE00C3AC05 /* Products */,
 			);
@@ -58,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				126842591E35AF2B00C3AC05 /* ItemsViewController.swift */,
+				1268425D1E35C25900C3AC05 /* ItemStore.swift */,
+				1268425B1E35B0E600C3AC05 /* Item.swift */,
 				126842471E35ADDE00C3AC05 /* AppDelegate.swift */,
 				1268424B1E35ADDE00C3AC05 /* Main.storyboard */,
 				1268424E1E35ADDE00C3AC05 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			files = (
 				1268425A1E35AF2B00C3AC05 /* ItemsViewController.swift in Sources */,
 				1268425C1E35B0E600C3AC05 /* Item.swift in Sources */,
+				1268425E1E35C25900C3AC05 /* ItemStore.swift in Sources */,
 				126842481E35ADDE00C3AC05 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
