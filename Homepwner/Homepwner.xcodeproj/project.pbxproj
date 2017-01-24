@@ -14,6 +14,7 @@
 		1268425A1E35AF2B00C3AC05 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126842591E35AF2B00C3AC05 /* ItemsViewController.swift */; };
 		1268425C1E35B0E600C3AC05 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268425B1E35B0E600C3AC05 /* Item.swift */; };
 		1268425E1E35C25900C3AC05 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268425D1E35C25900C3AC05 /* ItemStore.swift */; };
+		126842601E37F4F000C3AC05 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268425F1E37F4F000C3AC05 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		126842591E35AF2B00C3AC05 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
 		1268425B1E35B0E600C3AC05 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
 		1268425D1E35C25900C3AC05 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
+		1268425F1E37F4F000C3AC05 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				126842591E35AF2B00C3AC05 /* ItemsViewController.swift */,
+				1268425F1E37F4F000C3AC05 /* ItemCell.swift */,
 				1268425D1E35C25900C3AC05 /* ItemStore.swift */,
 				1268425B1E35B0E600C3AC05 /* Item.swift */,
 				126842471E35ADDE00C3AC05 /* AppDelegate.swift */,
@@ -147,6 +150,7 @@
 				1268425C1E35B0E600C3AC05 /* Item.swift in Sources */,
 				1268425E1E35C25900C3AC05 /* ItemStore.swift in Sources */,
 				126842481E35ADDE00C3AC05 /* AppDelegate.swift in Sources */,
+				126842601E37F4F000C3AC05 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
