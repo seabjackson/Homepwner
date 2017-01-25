@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vvg-og-5dk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tXq-6D-c5q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Items View Controller-->
+        <!--Homepwner-->
         <scene sceneID="lpf-M1-ead">
             <objects>
                 <tableViewController id="vvg-og-5dk" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,10 +97,17 @@
                             <outlet property="delegate" destination="vvg-og-5dk" id="koX-og-gbQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Homepwner" id="Dgj-ce-uQK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vra-ra-Frh">
+                            <connections>
+                                <action selector="addNewItem:" destination="vvg-og-5dk" id="QNg-cZ-Cbo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2N-XP-Uxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="-196"/>
+            <point key="canvasLocation" x="908" y="-196.55172413793105"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="wU9-UB-24b">
@@ -115,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cwp-OB-ePr">
-                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mMF-aM-yUP">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -131,6 +138,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="c16-31-PiE" id="9Qb-1D-ukk"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -148,6 +158,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="c16-31-PiE" id="tsr-mr-VZo"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -165,11 +178,14 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="c16-31-PiE" id="o8f-fH-V5x"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQU-Wa-xrt">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="517"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -182,12 +198,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kFb-7V-RWU" firstAttribute="top" secondItem="Cwp-OB-ePr" secondAttribute="bottom" constant="8" id="6z1-Ou-h9x"/>
                             <constraint firstItem="Cwp-OB-ePr" firstAttribute="leading" secondItem="Dv6-xT-C3v" secondAttribute="leadingMargin" id="Ikr-Zy-PB6"/>
                             <constraint firstItem="Cwp-OB-ePr" firstAttribute="top" secondItem="lqo-nS-qAG" secondAttribute="bottom" constant="8" id="XOy-NP-KN6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Cwp-OB-ePr" secondAttribute="trailing" id="gPJ-Iz-ov7"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aFC-6e-ZCR" appends="YES" id="Atr-rg-BSg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="pQU-Wa-xrt" id="YyJ-Dx-rkp"/>
@@ -197,8 +217,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTZ-yN-86w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aFC-6e-ZCR">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="c16-31-PiE" id="rDt-d7-m70"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="738" y="-197"/>
+            <point key="canvasLocation" x="1676" y="-197.45127436281859"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="av2-ho-B9G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tXq-6D-c5q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PW9-Nj-4Sw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vvg-og-5dk" kind="relationship" relationship="rootViewController" id="JYa-qu-c77"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPr-2u-AAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.199999999999999" y="-196.55172413793105"/>
         </scene>
     </scenes>
 </document>

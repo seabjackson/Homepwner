@@ -12,7 +12,7 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // create a new item and add it to the store
         let newItem = itemStore.createItem()
         
@@ -56,6 +56,12 @@ class ItemsViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -129,6 +135,8 @@ class ItemsViewController: UITableViewController {
             preconditionFailure("Unexpected segue identifier")
         }
     }
+    
+    // 
 }
 
 
