@@ -88,7 +88,7 @@
                                     <outlet property="nameLabel" destination="BoW-nr-wBb" id="2Hb-DZ-wLF"/>
                                     <outlet property="serialNumberLabel" destination="ZCG-A0-YYU" id="aX8-Oo-lbz"/>
                                     <outlet property="valueLabel" destination="RBK-dZ-hgz" id="R4Y-PL-MwZ"/>
-                                    <segue destination="c16-31-PiE" kind="show" id="jf4-85-NkC"/>
+                                    <segue destination="c16-31-PiE" kind="show" identifier="showItem" id="jf4-85-NkC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-30" y="-196"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="wU9-UB-24b">
             <objects>
-                <viewController id="c16-31-PiE" sceneMemberID="viewController">
+                <viewController id="c16-31-PiE" customClass="DetailsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lqo-nS-qAG"/>
                         <viewControllerLayoutGuide type="bottom" id="kFb-7V-RWU"/>
@@ -189,6 +189,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Cwp-OB-ePr" secondAttribute="trailing" id="gPJ-Iz-ov7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="pQU-Wa-xrt" id="YyJ-Dx-rkp"/>
+                        <outlet property="nameField" destination="dM2-7d-bB6" id="hPZ-3Q-NvG"/>
+                        <outlet property="serialNumberField" destination="GQi-mJ-WkO" id="eyV-K1-eWd"/>
+                        <outlet property="valueField" destination="si2-4E-XVc" id="DuW-J4-l2j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTZ-yN-86w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
