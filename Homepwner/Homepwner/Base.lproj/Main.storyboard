@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cwp-OB-ePr">
-                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <rect key="frame" x="16" y="72" width="343" height="543"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mMF-aM-yUP">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -156,24 +156,43 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQU-Wa-xrt">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="vTd-yh-5Fa">
+                                        <rect key="frame" x="0.0" y="142.5" width="343" height="400.5"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="GQi-mJ-WkO" firstAttribute="leading" secondItem="si2-4E-XVc" secondAttribute="leading" id="7w6-3A-U7x"/>
                                     <constraint firstItem="dM2-7d-bB6" firstAttribute="leading" secondItem="GQi-mJ-WkO" secondAttribute="leading" id="u9J-Wu-Q3O"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qX-nX-wxA">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3H2-F9-NG4"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="hqe-wO-rCj">
+                                        <connections>
+                                            <action selector="takePicture:" destination="c16-31-PiE" id="K0z-SN-ori"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="kFb-7V-RWU" firstAttribute="top" secondItem="Cwp-OB-ePr" secondAttribute="bottom" constant="8" id="6z1-Ou-h9x"/>
+                            <constraint firstItem="7qX-nX-wxA" firstAttribute="leading" secondItem="Dv6-xT-C3v" secondAttribute="leading" id="AnQ-8c-BP7"/>
+                            <constraint firstAttribute="trailing" secondItem="7qX-nX-wxA" secondAttribute="trailing" id="FQb-08-S5x"/>
                             <constraint firstItem="Cwp-OB-ePr" firstAttribute="leading" secondItem="Dv6-xT-C3v" secondAttribute="leadingMargin" id="Ikr-Zy-PB6"/>
+                            <constraint firstItem="kFb-7V-RWU" firstAttribute="top" secondItem="7qX-nX-wxA" secondAttribute="bottom" id="TZF-fk-LcJ"/>
                             <constraint firstItem="Cwp-OB-ePr" firstAttribute="top" secondItem="lqo-nS-qAG" secondAttribute="bottom" constant="8" id="XOy-NP-KN6"/>
+                            <constraint firstItem="7qX-nX-wxA" firstAttribute="top" secondItem="Cwp-OB-ePr" secondAttribute="bottom" constant="8" id="fao-3Y-uBn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Cwp-OB-ePr" secondAttribute="trailing" id="gPJ-Iz-ov7"/>
                         </constraints>
                         <connections>
@@ -182,6 +201,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="pQU-Wa-xrt" id="YyJ-Dx-rkp"/>
+                        <outlet property="imageView" destination="vTd-yh-5Fa" id="V2c-B9-R1e"/>
                         <outlet property="nameField" destination="dM2-7d-bB6" id="hPZ-3Q-NvG"/>
                         <outlet property="serialNumberField" destination="GQi-mJ-WkO" id="eyV-K1-eWd"/>
                         <outlet property="valueField" destination="si2-4E-XVc" id="DuW-J4-l2j"/>
@@ -194,7 +214,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1676" y="-197.45127436281859"/>
+            <point key="canvasLocation" x="1678" y="-278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="av2-ho-B9G">
